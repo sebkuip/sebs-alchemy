@@ -1,0 +1,13 @@
+{
+  "item.sebalchemy.amethyst": "Amethyst",
+  "item.sebalchemy.firegem": "Firegem",
+
+  "block.sebalchemy.amethyst_ore": "Amethyst ore",
+  "block.sebalchemy.amethyst_block": "Amethyst block",
+
+  "itemGroup.sebalchemyItemTab": "Seb's alchemy items",
+  "itemGroup.sebalchemyBlockTab": "Seb's alchemy blocks",
+  "itemGroup.sebalchemyOreTab": "Seb's alchemy ores",
+  "itemGroup.sebalchemyToolTab": "Seb's alchemy tools"
+
+}

@@ -1,0 +1,9 @@
+{
+  "stonetogold": {
+    "category": "blocks",
+    "subtitle": "sebalchemy.stonetogold",
+    "sounds": [
+      "sebalchemy:stonetogold"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "sebalchemy:amethyst_ore"
+  },
+  "result": "sebalchemy:amethyst",
+  "experience": 0.7,
+  "cookingtime": 100
+}

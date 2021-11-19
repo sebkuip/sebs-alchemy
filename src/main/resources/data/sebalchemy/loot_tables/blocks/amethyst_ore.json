@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 5,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sebalchemy:amethyst",
+          "weight": 3
+        },
+        {
+          "type": "empty",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

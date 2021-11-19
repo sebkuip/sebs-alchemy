@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BXB",
+    "BXB",
+    "XBX"
+  ],
+  "key": {
+    "B": {
+      "item": "sebalchemy:amethyst_block"
+    },
+    "X": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "sebalchemy:firegem"
+  }
+}
