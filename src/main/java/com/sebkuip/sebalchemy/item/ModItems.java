@@ -13,6 +13,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SebAlchemy.MOD_ID);
 
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new Item(new Item.Properties().tab(ModItemGroup.SEBALCHEMY_ITEM_GROUP)));
+    public static final RegistryObject<Item> AMETHYST_STICK = ITEMS.register("amethyst_stick", () -> new Item(new Item.Properties().tab(ModItemGroup.SEBALCHEMY_ITEM_GROUP)));
 
     public static final RegistryObject<Item> FIREGEM = ITEMS.register("firegem", () -> new FireGem(new Item.Properties().tab(ModItemGroup.SEBALCHEMY_ITEM_GROUP).durability(10)));
 
