@@ -118,7 +118,12 @@ class ConvertingBlock {
                     5, 0.1d, 0.1d, 0.1d, 2d);
     }
 
-    public boolean equals(ConvertingBlock other) {
-        return this.pos.getX() == other.pos.getX() && this.pos.getY() == other.pos.getY() && this.pos.getZ() == other.pos.getZ();
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof ConvertingBlock)) {
+            return false;
+        }
+        ConvertingBlock o = (ConvertingBlock) other;
+        return this.pos.equals(o.pos);
     }
 }
