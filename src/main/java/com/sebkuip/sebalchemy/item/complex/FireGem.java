@@ -32,10 +32,8 @@ public class FireGem extends Item {
     private static final List<ConvertingBlock> converting = new ArrayList<>();
 
     private boolean addConverting(ConvertingBlock block) {
-        for (ConvertingBlock other : converting) {
-            if (block.equals(other)) {
-                return false;
-            }
+        if(converting.contains(block)) {
+            return false;
         }
         converting.add(block);
         return true;
@@ -103,19 +101,19 @@ class ConvertingBlock {
         if (success) {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.GOLD_BLOCK.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d,
-                    20, 0.1d, 0.1d, 0.1d, 2d);
+                    20, 0.5d, 0.5d, 0.5d, 4d);
             world.setBlock(pos, Blocks.GOLD_BLOCK.defaultBlockState(), 3);
         } else {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.REDSTONE_BLOCK.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d,
-                    20, 0.1d, 0.1d, 0.1d, 2d);
+                    20, 0.5d, 0.5d, 0.5d, 4d);
         }
     }
 
     public void playFrame() {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.STONE.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5,
-                    5, 0.1d, 0.1d, 0.1d, 2d);
+                    5, 0.1d, 0.1d, 0.1d, 4d);
     }
 
     @Override
