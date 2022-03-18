@@ -32,12 +32,13 @@ public class FireGem extends Item {
     private static final List<ConvertingBlock> converting = new ArrayList<>();
 
     private boolean addConverting(ConvertingBlock block) {
-        if (converting.contains(block)) {
-            return false;
-        } else {
-            converting.add(block);
-            return true;
+        for (ConvertingBlock other : converting) {
+            if (block.equals(other)) {
+                return false;
+            }
         }
+        converting.add(block);
+        return true;
     }
 
     private static void serverTick(TickEvent.ServerTickEvent event) {
@@ -102,24 +103,22 @@ class ConvertingBlock {
         if (success) {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.GOLD_BLOCK.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d,
-                    10, 0.1d, 0.1d, 0.1d, 2d);
+                    20, 0.1d, 0.1d, 0.1d, 2d);
             world.setBlock(pos, Blocks.GOLD_BLOCK.defaultBlockState(), 3);
         } else {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.REDSTONE_BLOCK.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d,
-                    10, 0.1d, 0.1d, 0.1d, 2d);
+                    20, 0.1d, 0.1d, 0.1d, 2d);
         }
     }
 
     public void playFrame() {
-        if (frame % 5 == 0) {
             world.sendParticles(new BlockParticleData(ParticleTypes.BLOCK, Blocks.STONE.defaultBlockState()),
                     pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5,
-                    3, 0.1d, 0.1d, 0.1d, 2d);
-        }
+                    5, 0.1d, 0.1d, 0.1d, 2d);
     }
 
     public boolean equals(ConvertingBlock other) {
-        return this.pos == other.pos;
+        return this.pos.getX() == other.pos.getX() && this.pos.getY() == other.pos.getY() && this.pos.getZ() == other.pos.getZ();
     }
 }
